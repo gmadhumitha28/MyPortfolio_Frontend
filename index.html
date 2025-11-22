@@ -6,7 +6,7 @@
   <title>Madhumitha Portfolio</title>
   <link rel="stylesheet" href="style.css">
 
-<!-- 🌟 Meta Image for Social & SEO Preview -->
+<!-- Meta Image for Social & SEO Preview -->
 <meta property="og:image" content="logo.png">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
@@ -15,14 +15,25 @@
 <link rel="icon" type="image/png" href="logo.png">
 
 </head>
-<body>
-  <header class="main-header">
-    <img src="logo.png" alt="Madhumitha" class="profile-pic">
-    <h1>Welcome to Madhumitha’s Portfolio</h1>
-    <p>Hello, This is Madhumitha. I’m a QA Analyst and Content Creator who loves blending logic with creativity. Whether I’m designing a script or writing an article, my ultimate goal is always the same – delivering quality software or content.</p>
-  </header>
 
-<section class="about-me">
+  <header class="main-header">
+
+  <img src="Logo_Portfolio.png" class="profile-pic" alt="Profile">
+
+  <nav class="header-right">
+    <a href="#about">📌 About Me</a>
+    <a href="#Experience">💼 What I Do</a>
+    <a href="#contact">📩 Contact</a>
+  </nav>
+</header>
+<body>
+<section class="sub-section">
+    <h1>Delivering Quality - In Code, In Content, In Experience</h1>
+    <p>Hello, This is Madhumitha. I’m a <strong> QA Analyst and Content Creator </strong> who loves blending logic with creativity.</p>
+    <p>Whether I’m designing a script or writing an article, my ultimate goal is always the same - delivering quality software or content.</p>
+  </section>
+
+<main id="about" class="about-me">
   <h2>About Me</h2>
   <ul>
     <li>
@@ -35,60 +46,82 @@
      In addition to testing, I also am passionate about <strong>Technical Content Writing</strong>. I write simple and engaging content that help professionals and businesses understand the QA topics with ease.
     </li>
   </ul>
-</section>
+</main>
 
-  <main class="domains">
+<h2 id="Experience" class="section-heading">What I Do</h2>
+  <section class="domains">
   <div class="card">
     <h2>✅ Quality Assurance</h2>
-    <p>Discover automation projects, frameworks, and tools built to simplify testing in startups.</p>
+    <p>Building confidence in every release through detailed testing</p>
     <a href="qa.html" class="btn">Explore QA</a>
   </div>
 
   <div class="card">
     <h2>✍️ Content Writing</h2>
-    <p>Read blogs and articles that turn technical QA topics into relatable, engaging stories.</p>
+    <p>Turning technical QA topics into simple and engaging stories</p>
     <a href="content.html" class="btn">Explore Content Writing</a>
   </div>
-</main>
+</section>
 
-<section class="contact-form">
+<section id="contact" class="contact-form">
   <h2>Contact Me</h2>
-  <p>If you'd like to get in touch, please fill out the form below. I’ll respond soon!</p>
+  <p>Ready to collaborate? Send a message with your details. I look forward to connecting with you!!</p>
 
- <form id="contactForm" method="POST" data-netlify="true" action="success.html">
-
+ <form id="contactForm" method="POST" data-netlify="true">
     <input type="hidden" name="form-name" value="contact">
     
     <div class="form-group">
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" placeholder="Your name" required>
+      <label for="name">Name <span class="required">*</span></label>
+      <input type="text" id="name" name="name" placeholder="Your Name" pattern="[A-Za-z\s'\-]{2,50}" required>
     </div>
 
     <div class="form-group">
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" placeholder="Your email" required>
-    </div>
-
- <div class="form-group">
-      <label for="email">Contact</label>
-      <input type="contact" id="number" name="contact" placeholder="Your contact number">
+      <label for="email">Email ID <span class="required">*</span></label>
+      <input type="email" id="email" name="email" placeholder="Your Email ID" required>
     </div>
 
     <div class="form-group">
-      <label for="message">Message</label>
+      <label for="email">Contact Number</label>
+      <input type="tel" id="mobile" name="contact" placeholder="Your Contact Number" pattern="[0-9]{10}">
+    </div>
+
+    <div class="form-group">
+      <label for="message">Message <span class="required">*</span></label>
       <textarea id="message" name="message" rows="5" placeholder="Write your message..." required></textarea>
     </div>
 
     <button type="submit" class="btn">Send Message</button>
+    <p class="mandatory-key">Fields marked with a <span class="required">(*)</span> are mandatory</p>
 
 <p id="status"></p>
-
-  <script src="script.js"></script>
   </form>
 </section>
 
   <footer>
-    <p>© 2025 Madhumitha Govindarajan | Built with HTML & CSS | Hosted on Netlify</p>
+  <p class="contact-intro">
+   <i>I’d love to hear from you. Whether it's about QA, content writing, or collaboration – send a quick message.</i>
+  </p>
+
+  <div class="contact-grid">
+    
+    <div class="contact-item">
+      <h3>LinkedIn</h3>
+      <a href="https://www.linkedin.com/in/madhumitha-govindarajan/" target="_blank">
+        https://www.linkedin.com/in/madhumitha-govindarajan/
+      </a>
+    </div>
+
+    <div class="contact-item">
+      <h3>Email ID</h3>
+      <a href="mailto:gmadhumitha.official@gmail.com">
+        gmadhumitha.official@gmail.com
+      </a>
+    </div>
+  </div>
+
+    <p>© Madhumitha Govindarajan | Built with HTML & CSS | Hosted on Netlify</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
