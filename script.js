@@ -1,5 +1,4 @@
 document.getElementById("contactForm").addEventListener("submit", async function (e) {
-    e.preventDefault();
 
     const formStatus = document.getElementById("formStatus");
     formStatus.textContent = "⏳ Sending message...";
